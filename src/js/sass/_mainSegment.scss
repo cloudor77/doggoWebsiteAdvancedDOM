@@ -1,0 +1,391 @@
+// Main CSS manipulation
+.sections__segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 30em auto;
+}
+
+.section {
+  padding: 4rem 5rem;
+  border-top: $border-line;
+  width: 100%;
+}
+
+// First Segment CSS styling and manipulation
+.features {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: 8fr 1fr;
+}
+
+.features__list {
+  grid-column: 2;
+}
+
+.section__features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 1.5rem;
+
+  margin: 10rem;
+}
+
+.section__features h1 {
+  padding: 3rem 0rem;
+}
+
+// Feature link - CSS, transitions, animations
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem 0rem;
+  padding-top: 10rem;
+}
+
+.section__features__list {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0rem 0rem;
+}
+
+.features__list__item {
+  width: 300px;
+  margin: 0.3rem 0 1rem 0;
+  padding: 1.25rem 0rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-size: $font--size-medium;
+  font-weight: 800;
+  text-align: center;
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: all ease-in-out 500ms;
+}
+
+.features__list__item--active {
+  transform: translateX(-10rem);
+  font-weight: 800;
+  color: $color--font-color;
+}
+
+.feature-item--1 {
+  background-color: $color--primary;
+}
+
+.feature-item--2 {
+  background-color: $color--secondary;
+}
+
+.feature-item--3 {
+  background-color: $color--terciary;
+}
+// Scrolling button oriented under links
+.scroll--button {
+  display: inline-block;
+  color: $color--primary;
+  background: none;
+
+  margin-top: 1rem;
+  font-size: 1.6em;
+  font-weight: 600;
+  padding-bottom: 0.25em;
+
+  border: none;
+  border-bottom: 1px solid currentColor;
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+// Images Section - zig-zag
+.img_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 10rem 0;
+}
+
+.img_section--info {
+  text-align: center;
+  padding: 0rem 4rem;
+}
+
+.img_section--text {
+  padding: 1rem 4rem;
+}
+
+.img_section--imgs {
+  width: 45%;
+  border-radius: 0.7rem;
+}
+
+.special__font {
+  text-transform: uppercase;
+  font-size: $font--size-ultimate;
+  font-weight: $font-weight--800;
+}
+
+.img_section--headText {
+  text-transform: uppercase;
+  font-size: $font--size-huge;
+  margin-bottom: 1.55rem;
+}
+
+.img_section--text {
+  font-size: $font--size-medium;
+  font-weight: $font-weight--500;
+  text-align: center;
+}
+
+// Second Segment CSS styling and manipulation
+.section__2--title {
+  width: 80rem;
+  margin: 20rem auto 5rem auto;
+}
+
+.values__headline--main {
+  text-transform: uppercase;
+  color: $color--primary;
+
+  font-size: $font--size-gigantic;
+  font-weight: $font-weight--800;
+
+  padding: 0.55rem 0;
+}
+
+.values__headline--secondary {
+  text-transform: uppercase;
+  font-size: $font--size-huge;
+  font-weight: $font-weight--500;
+}
+
+.values--cite {
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-left: 0.75em;
+}
+
+.values {
+  width: 110em;
+  margin: 10em auto;
+  background-color: $white--basic;
+  border-radius: 3rem;
+}
+
+.values__container {
+  display: flex;
+  justify-content: center;
+}
+
+.value--btn {
+  display: inline-block;
+  width: 25rem;
+  background-color: $color--primary;
+  font-size: $font--size-medium;
+  font-weight: $font-weight--600;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.75rem 4rem;
+  margin: 0 1.95rem;
+}
+
+.value__tab_offset {
+  transform: translateY(-50%);
+  transition: transform 300ms ease-in-out;
+}
+.value__btn--active {
+  transform: translateY(-70%);
+}
+
+.value--btn span {
+  display: inline-block;
+  margin-right: 0.35rem;
+}
+
+.value--btn-2 {
+  background-color: $color--secondary;
+}
+.value--btn-3 {
+  background-color: $color--terciary;
+}
+
+.values__tab {
+  margin: 0 auto;
+}
+
+.values__content {
+  display: none;
+  font-size: $font--size-medium;
+  padding: 0.75rem 4rem 8rem 4rem;
+}
+
+.values__content--active {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.values__content--headline {
+  text-transform: uppercase;
+  font-weight: $font-weight--600;
+  font-size: $font--size-gigantic;
+  padding-bottom: 4rem;
+}
+
+.values__content--text {
+  font-size: $font--size-medium;
+  padding: 0 10rem;
+  line-height: 1.6;
+}
+
+// Slider Segment
+
+.slider__segment {
+  width: 80em;
+  margin: 20rem auto 0 auto;
+}
+
+.slider__segment--headline {
+  text-transform: uppercase;
+  color: $color--primary;
+
+  font-size: $font--size-huge;
+  font-weight: $font-weight--800;
+
+  padding: 0.35rem 0;
+}
+
+.slider__segment--text {
+  text-transform: uppercase;
+  font-size: $font--size-huge + 1rem;
+  font-weight: $font-weight--600;
+}
+
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: transform 1s ease-in-out;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff8c;
+  font-size: 3.25rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  padding-left: 0.75rem;
+  left: 7%;
+  transform: translate(-50%, -50%);
+}
+.slider__btn--right {
+  padding-left: 0.75rem;
+  right: 7%;
+  transform: translate(50%, -50%);
+}
+
+.review__content {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.review__content--headline {
+  font-size: $font--size-huge;
+  text-transform: uppercase;
+  font-weight: $font-weight--800;
+  margin-bottom: 1.25rem;
+}
+
+.review__content--text {
+  font-size: $font--size-small;
+  line-height: 1.8;
+}
+
+// Footer
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50rem;
+  background-color: $footer-backgroundcolor;
+}
+
+.footer__links--segment {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 8.5rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.footer__links a {
+  text-decoration: none;
+  color: $white--basic;
+  font-size: $font--size-medium;
+  text-transform: uppercase;
+}
+
+.footer__button--segment {
+  margin: 2.5rem 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.footer-btn {
+  padding: 1.95rem 5.5rem;
+  font-size: $font--size-huge;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-logo {
+  margin-top: 8.5rem;
+}

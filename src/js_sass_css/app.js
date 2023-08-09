@@ -4,7 +4,7 @@ const navbar = document.querySelector(".nav__navbar");
 const nav = document.querySelector("nav");
 // Modal Window behaviour and Overlay
 const openFormButtons = document.querySelectorAll(".open__modal_w");
-console.log(openFormButtons);
+
 const headerSegment = document.querySelector(".header");
 const modalWindow = document.querySelector(".modal");
 const overlaySegment = document.querySelector(".overlay");
@@ -28,7 +28,9 @@ const slidesBtnLeft = document.querySelector(".slider__btn--left");
 const slidesBtnRight = document.querySelector(".slider__btn--right");
 let currentSlide = 0;
 let maximumSlide = slides.length;
-console.log(maximumSlide);
+
+// Footer
+const footerAnchs = document.querySelectorAll(".footer_link a");
 
 // Array of document selectors for adjusting Modal and Overlay
 const closingModalButtons = [overlaySegment, modalWindowClose];
@@ -51,11 +53,9 @@ const hoverLinks = function (e) {
 // Sticky navbar when scrolling
 
 const receiveNavHeight = navbar.getBoundingClientRect().height;
-console.log(receiveNavHeight);
 
 const navThatSticks = (entries) => {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) {
     nav.classList.add("sticky");
   } else {
@@ -138,7 +138,7 @@ const jumpToSection = function (e) {
       !e.target.classList.contains("open__modal_w")
     ) {
       const id = e.target.getAttribute("href");
-      console.log(id);
+
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     }
   });
@@ -158,7 +158,7 @@ featureListItem.forEach((item) =>
       `feature-item--${item.dataset.link}`
     );
     const dataLinkvalue = target.getAttribute("data-link");
-    console.log(dataLink);
+
     if (!target) return;
     if (target) {
       item.classList.add("features__list__item--active");
@@ -193,7 +193,6 @@ valueSection.addEventListener("click", function (e) {
   e.preventDefault();
   const clicked = e.target.closest(".value--btn");
   const clickedValue = clicked.dataset.value;
-  console.log(typeof clickedValue);
   if (!clicked) return;
   valueTabButtons.forEach((btn) => btn.classList.remove("value__btn--active"));
   clicked.classList.add("value__btn--active");
@@ -202,7 +201,6 @@ valueSection.addEventListener("click", function (e) {
   document
     .querySelector(`.values__content--${clickedValue}`)
     .classList.add("values__content--active");
-  console.log("what");
 });
 
 // Slider Segment
@@ -230,7 +228,6 @@ const previousSlide = () => {
 
   moveToSlide(currentSlide);
 };
-console.log(currentSlide);
 
 // Invoking functions
 jumpToSection(".nav__links");
@@ -240,9 +237,9 @@ slidesBtnLeft.addEventListener("click", previousSlide);
 navbar.addEventListener("mouseover", hoverLinks.bind(0.5));
 navbar.addEventListener("mouseout", hoverLinks.bind(1));
 
-const arr = [1, 2, 3];
-let result = 0;
-for (const value in arr) {
-  result += +value;
-}
-console.log(result);
+footerAnchs.forEach((anch) => {
+  anch.addEventListener("click", (e) => {
+    e.preventDefault();
+    return false;
+  });
+});
